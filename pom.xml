@@ -46,4 +46,10 @@
    </plugin>
   </plugins>
  </build>
+ <modules>
+  <module>java8-checker</module>
+  <module>java8-locale</module>
+  <module>java8-stream</module>
+  <module>java8-common</module>
+ </modules>
 </project>

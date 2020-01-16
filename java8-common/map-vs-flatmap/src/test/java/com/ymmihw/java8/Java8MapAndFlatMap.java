@@ -22,10 +22,16 @@ public class Java8MapAndFlatMap {
 
   @Test
   public void givenStream_whenCalledFlatMap_thenProduceFlattenedList() throws Exception {
-    List<List<String>> list = Arrays.asList(Arrays.asList("a"), Arrays.asList("b"));
-    System.out.println(list);
+    List<List<String>> nest2List = Arrays.asList(Arrays.asList("a"), Arrays.asList("b"));
+    System.out.println(nest2List);
+    System.out.println(nest2List.stream().map(Collection::stream).collect(Collectors.toList()));
+    System.out.println(nest2List.stream().flatMap(Collection::stream).collect(Collectors.toList()));
 
-    System.out.println(list.stream().flatMap(Collection::stream).collect(Collectors.toList()));
+    List<List<List<String>>> nest3List =
+        Arrays.asList(Arrays.asList(Arrays.asList("a"), Arrays.asList("b")),
+            Arrays.asList(Arrays.asList("c"), Arrays.asList("d")));
+    System.out.println(nest3List);
+    System.out.println(nest3List.stream().flatMap(Collection::stream).collect(Collectors.toList()));
   }
 
   @Test

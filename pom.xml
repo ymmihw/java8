@@ -17,6 +17,11 @@
 
  <dependencies>
   <dependency>
+   <groupId>org.projectlombok</groupId>
+   <artifactId>lombok</artifactId>
+   <scope>provided</scope>
+  </dependency>
+  <dependency>
    <groupId>org.springframework.boot</groupId>
    <artifactId>spring-boot-starter-test</artifactId>
    <scope>test</scope>
@@ -51,5 +56,6 @@
   <module>java8-locale</module>
   <module>java8-stream</module>
   <module>java8-common</module>
+  <module>java8-concurrent</module>
  </modules>
 </project>
